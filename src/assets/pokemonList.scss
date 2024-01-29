@@ -1,0 +1,161 @@
+@import 'colors';
+
+.pokeModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.searchBarBox {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 10px;
+    font-family:  "Poppins", sans-serif;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 50%;
+
+}
+
+.searchBar {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #20e2d7;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 50%;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    &:focus { 
+        outline: 2px solid #20e2d7;
+
+    }
+    &input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+.wrapper {
+    width: 900px;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0px;
+}
+
+.wrappedContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.elementArea {
+
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #7d7e88;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    height: 200px;
+    width: 160px;
+    border: 1px solid rgb(70, 110, 155);
+    border-radius: 10%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.elementArea:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #20e2d7;
+  }
+.pokemonTextArea {
+    width: inherit;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: rgb(189, 89, 89);
+}
+
+.pokemonTypeArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.typeBox {
+    background-color: #555f63;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 65px;
+    height: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonFrame {
+    border: 1px solid rgb(70, 110, 155);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnBox {
+    display: flex;
+    gap: 5px;
+}
+
+.btnPag {
+    background-color: rgba(38, 76, 115, 0.459);
+    width: 60px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+@media (min-width: 360px) and (max-width: 530px) {
+    .wrapper {
+        width: 750px;
+
+    }
+
+    .wrappedContent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 300px) and (max-width: 359px) {
+    .wrapper {
+        width: 250px;
+
+    }
+
+    .wrappedContent {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
